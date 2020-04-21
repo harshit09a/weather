@@ -4,12 +4,13 @@ Weather of <%= data.name%>
 </h1>
 <div class="container show text-uppercase">
 	<ul class="text-success text-center list-group">
-	<li class="list-group-item">Discription- <strong><%= data["weather"][0]["description"]%></strong></li>
-	<li class="list-group-item">mini temperature- <strong><%= data["main"]["temp_min"]%></strong></li>
-	<li class="list-group-item">max temperature- <strong><%= data["main"]["temp_max"]%></strong></li>
+	<li class="list-group-item">Description- <strong><%= data["weather"][0]["description"]%></strong></li>
+	<li class="list-group-item">mini. temperature- <strong><%= data["main"]["temp_min"]%></strong></li>
+	<li class="list-group-item">max. temperature- <strong><%= data["main"]["temp_max"]%></strong></li>
 </ul>
+	<a class="btn btn-success float-right" href="/">go back</a>
 </div>
 
 
-	<a href="/">go back</a>
+	
 <%- include("partials/footer.ejs") %>
