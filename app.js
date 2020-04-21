@@ -8,9 +8,7 @@ app.get("/result",function(req,res){
 		if(!error&&response.statusCode==200)
 			{
 				var data = JSON.parse(body);
-				if(data["cod"]==404)
-				res.send("<h1>not found</h1>")
-				else
+				
 					
 				res.render("result.ejs",{data:data});
 			}
@@ -20,7 +18,7 @@ app.get("/result",function(req,res){
 app.get("/",function(req,res){
 	res.render("search.ejs");
 })
-app.listen(3000,function(){
+app.listen(process.env.PORT||3000,function(){
 
 	console.log("server started");
 })
