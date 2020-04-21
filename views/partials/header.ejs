@@ -108,7 +108,7 @@ box-shadow: none;
     
 	  <div class="col-12 d-flex justify-content-end">
 		  <form class="form-inline my-2 my-lg-0 " action="/result" method="get">
-        <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" name="search" placeholder="city/country/place" aria-label="Search">
         <button class="btn btn-primary my-2 my-sm-0 " type="submit">Search</button>
        </form>
 		
@@ -116,4 +116,10 @@ box-shadow: none;
    
   </div>
 </nav>
-    
+    <% if(error&&error.length>0){ %>
+		  <div class="alert alert-success" id="landing-header"role="alert">
+  <%= error %>
+</div>
+		  
+		  
+	  <%}%>
